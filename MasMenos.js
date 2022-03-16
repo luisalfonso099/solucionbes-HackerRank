@@ -13,15 +13,3 @@ const masMenos = (arr)=>{
 
 masMenos(arr);
 
-
-
-
-
-
-
-
-
-
-
-
-
