@@ -8,7 +8,7 @@ const escalera = (n)=>{
      }
     for (let i = 0; i < n ; i++) {
         spaces = spaces.slice(1)
-        console.log(`${spaces }${simbolo += '#'}`);
+        // console.log(`${spaces }${simbolo += '#'}`)
     }
 }
 
