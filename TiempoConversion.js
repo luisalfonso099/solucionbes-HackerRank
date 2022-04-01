@@ -4,7 +4,7 @@ const tiempoConversion = (s)=>{
     
     let hr = ''
     const arrayHoraMilitar = [];
-    const amPm = s.slice(s.length -2, s.length) 
+    const amPm    = s.slice(s.length -2, s.length) 
     const horaNow = s.slice(0, 2)
 
     for (let i = 12; i <= 23; i++) {
@@ -23,7 +23,7 @@ const tiempoConversion = (s)=>{
     }
 
     if(amPm === 'PM'){
-        if(horaNow.startsWith('0')) hr = horaNow.slice(1,2)
+       if(horaNow.startsWith('0')) hr = horaNow.slice(1,2)
        arrayHoraMilitar.push(12)
        hr = horaNow.slice(0,2)
        const horaMilitar = arrayHoraMilitar.filter((h, i) => i == hr )[0]
