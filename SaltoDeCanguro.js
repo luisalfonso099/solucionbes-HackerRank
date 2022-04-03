@@ -6,18 +6,12 @@ function kangaroo(x1, v1, x2, v2) {
         c1 = x1 += v1;
         c2 = x2 += v2;
     }
-
-    
     if(x1 == x2){
         return "YES"
     }else {
         return "NO"
     }
-
-
-
 }
-
 console.log( kangaroo(0,2,5,3));
 
 
