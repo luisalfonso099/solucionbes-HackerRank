@@ -16,10 +16,8 @@ const rompiendoRecords = (scores)=> {
         }
     });
 
-    return recordPositivo + ' ' + recordNegativo
+    return [recordPositivo, recordNegativo]
 
 }
 
-console.log(
-    rompiendoRecords([3, 4, 21, 36, 10, 28 ,35, 5, 24, 2])
-);
+rompiendoRecords([3, 4, 21, 36, 10, 28 ,35, 5, 24, 2])
