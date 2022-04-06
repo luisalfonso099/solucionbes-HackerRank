@@ -1,32 +1,25 @@
 function migratoryBirds(arr) {
     // Write your code here
-    const res = [];
-    let vecesQueSeRepite = [];
-    let avesMAx          = [];
-    let contador      = 1;
+    let repetidos = [];
+    let contador = 1;
+    const unicosElementos = [];
     arr.sort()
+    
     for (let i = 0; i < arr.length; i++) {
-        if(arr[i +1] === arr[i]) {
+
+        if (arr[i +1] === arr[i]) {
             contador ++;
-        }else{
-            vecesQueSeRepite.push(contador);
-            avesMAx.push(arr[i]);
+        }
+        else{
+            unicosElementos.push(arr[i]);
+            repetidos.push(contador);
             contador = 1;
         }
-    }
-    for (let j = 0; j < vecesQueSeRepite.length; j++) {
-        const el = vecesQueSeRepite[j];
-        const it = avesMAx[j];
-        res.push(el,it)
-    }
-
-    
-    return (Math.max(...vecesQueSeRepite));
-
+    };
+    const resp = unicosElementos.slice(repetidos.indexOf(Math.max(...repetidos)),repetidos.indexOf(Math.max(...repetidos)) +1)
+    return resp
 };
 
 
-console.log(
-    migratoryBirds([1,4,4,4,5,3,3])
+    migratoryBirds([4,1,4,4,4,5,3,3,3,3,3,4,4])
 
-);
