@@ -1,3 +1,6 @@
+// Dado un arreglo de enteros, encuentre el subarreglo más largo donde la diferencia absoluta entre dos elementos cualquiera sea menor o igual que
+
+
 function pickingNumbers(a) {
     let recoger = [];
     a.sort((a, b)=> a - b)
@@ -34,6 +37,5 @@ function pickingNumbers(a) {
     return Math.max(...res)
 
 }
-
 
 pickingNumbers([98,3,99,1,97,2])
