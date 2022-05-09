@@ -4,7 +4,7 @@ function jumpingOnClouds(c, k) {
     let cloud = null;
     let posicion = 0;
     if(c[0] == 1){
-        energy - 2
+        energy += -2
     }
     c[0] = "hola"
     do {
