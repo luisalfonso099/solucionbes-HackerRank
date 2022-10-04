@@ -12,12 +12,12 @@ function appendAndDelete(s, t, k) {
 
     console.log(s);
     if(t === s){
-        return 'Yes'
+        return 'otra cosa'
     }else {
         return 'No'
     }
 
-    //Mi ultimo cambios par ahcer un merge
+    //Mi ultimo cambios par ahcer un merge 2
 
 }
 
