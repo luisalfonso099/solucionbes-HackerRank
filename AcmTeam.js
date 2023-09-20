@@ -1,30 +1,21 @@
 function acmTeam(topic) {
-    // Write your code here
+  let equipos = {}
+  let n = 1
+  const arrays = topic.map((el) => el.split('').map((n) => Number(n)))
+  for (let i = 0; i < arrays.length; i++) {
+    let item = arrays[i]
+    for (let j = 1; j < arrays.length; j++) {
+      let item2 = arrays[j]
+      item.forEach((l, v) => {
+        if (item2[v] + l > 0) {
+          equipos[`${i}y${j}`] = n++
+        }
+      })
+      n = 1
+    }
+  }
+  console.log(equipos)
+}
 
-    var maxT = 0;
-    var max = 0;
-    
-    for(var i = 0; i < topic.length-1; i++) {
-        for(var j = i + 1; j < topic.length; j++ ) {
-            // known is their combined knowledge while totalKnown 
-            // is a count of every non-0 character in known
-            // had to use BigInt for known to prevent javscript
-            // defaulting to scientific notation
-            let known = BigInt(topic[i]) + BigInt(topic[j]);
-            console.log(known);
-            let totalKnown = known.toString().split('').filter((topic) => topic !== 0).length;
-            if (totalKnown > max) {
-                max = totalKnown;
-                maxT = 1;
-            } else if (totalKnown === max) {
-                maxT++;
-            };
-        };
-    };
-
-    return [max, maxT];
-
-};
-
-const resp = acmTeam(['10101','11110','00010']);
-console.log(resp);
+const arr = ['10101', '11110', '00010']
+acmTeam(arr)
